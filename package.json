@@ -1,7 +1,7 @@
 {
-  "name": "Saniya_Kanwal_ATM",
-  "version": "1.0.0",
-  "description": "",
+  "name":"saniyak-atm",
+  "version":"1.0.2",
+  "description": "A simple ATM",
   "main": "index.js",
   "type": "module",
   "scripts": {

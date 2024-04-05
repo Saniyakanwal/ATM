@@ -23,7 +23,7 @@ let pinAnswer = await inquirer.prompt(
               name:"operation",
               message:"please select option",
               type:"list",
-              choices:["Check Balance","Withdraw money",""]
+              choices:["Check Balance","Withdraw money","Deposit"]
            }
         ]
     );
@@ -49,6 +49,20 @@ let pinAnswer = await inquirer.prompt(
     }else{
         console.log("insufficient balance");
     }
+    }
+    //Deposit
+    if (operationAns.operation === "Deposit") {
+        let Deposit = await inquirer.prompt(
+            [
+                {
+                    name:"amount",
+                    message:"how much money do you want to Deposit",
+                    type:"number"
+                }
+            ]
+        );
+        myBalance += Deposit.amount
+        console.log(`your total  balance is ${myBalance}`)
     }
     //check balance
 if(operationAns.operation === "Check Balance"){
